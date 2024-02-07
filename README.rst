@@ -1,11 +1,13 @@
 ABOUT
 =====
-Not yet ready.
+email-output is a single python script,
+that will run a given command,
+captures its output and send it via email.
 
 
 REQUIREMENTS
 ============
-Not yet ready.
+- Python 3
 
 
 INSTALLATION
@@ -15,7 +17,7 @@ Not yet ready.
 
 USAGE
 =====
-Not yet ready.
+email-output.py -h
 
 
 DEVELOPMENT

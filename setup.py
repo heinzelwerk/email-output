@@ -14,7 +14,7 @@ def long_description():
 setup(
     name='email-output',
     version='1.0.dev0',
-    description='Run a command and send its output via email',
+    description='Execute a command and send its output via email',
     long_description=long_description(),
     long_description_content_type='text/x-rst',
     url='https://dev.heinzelwerk.de/git/python/email-output',
