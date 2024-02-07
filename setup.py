@@ -32,9 +32,9 @@ setup(
     description='Execute a command and send its output via email',
     long_description=long_description(),
     long_description_content_type='text/x-rst',
-    url='https://dev.heinzelwerk.de/git/heinzel/email-output',
+    url='https://github.com/heinzelwerk/email-output.git',
     author='Jens Kleineheismann',
-    author_email='heinzel@farbemachtstark.de',
+    author_email='heinzel@heinzelwerk.de',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'License :: Public Domain',
