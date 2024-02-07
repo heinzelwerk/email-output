@@ -12,7 +12,7 @@ def version():
     path = os.path.abspath(os.path.dirname(__file__))
     script = os.path.join(path, MAIN_SCRIPT)
     try:
-        ret = subprocess.run([script, '--version'], capture_output=True, text=True, check=True)
+        ret = subprocess.run([script, '--version'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, universal_newlines=True, check=True)
         output = ret.stdout
     except subprocess.CalledProcessError:
         output = 'bogus 0.1.dev0'
