@@ -1,0 +1,29 @@
+[MASTER]
+
+persistent=no
+
+
+[MESSAGES CONTROL]
+
+disable=missing-docstring,
+        missing-module-docstring,
+        missing-class-docstring,
+        missing-function-docstring,
+
+[BASIC]
+
+good-names=_,
+           c,
+           e,
+           f,
+           i,
+           j,
+           n,
+           r,
+           cm,  # cm stands for ContextManager
+           pk,  # pk stands for primary key
+
+[FORMAT]
+
+max-line-length=120
+

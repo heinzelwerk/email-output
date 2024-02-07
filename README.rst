@@ -8,21 +8,18 @@ captures its output and send it via email.
 REQUIREMENTS
 ============
 - Python 3
+- sendmail compatible binary
 
 
 INSTALLATION
 ============
-Not yet ready.
+1. The sendmail binary (often /usr/sbin/sendmail) must be found using your search PATH.
+2. pip install .
 
 
 USAGE
 =====
-email-output.py -h
-
-
-DEVELOPMENT
-===========
-Not yet ready.
+$ email-output.py -h
 
 
 LICENSE
