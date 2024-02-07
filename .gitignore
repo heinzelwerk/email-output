@@ -1,6 +1,9 @@
-/.idea/
-
 *.pyc
 
 /build/
 /email_output.egg-info/
+
+/.coverage
+/.tox/
+
+/.idea/

@@ -5,7 +5,7 @@ import re
 import subprocess
 from setuptools import setup
 
-MAIN_SCRIPT = 'scripts/email-output.py'
+MAIN_SCRIPT = 'email-output.py'
 
 
 def version():

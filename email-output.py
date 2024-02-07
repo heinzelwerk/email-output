@@ -11,7 +11,7 @@ import time
 from email.mime.text import MIMEText
 
 PROG_NAME = os.path.basename(__file__)
-VERSION = '1.1'
+VERSION = '1.2'
 
 
 class Program:
@@ -19,7 +19,7 @@ class Program:
         self._argparser = self._setup_argparser()
 
     def __call__(self, *args, **kwargs):
-        return self.run(**kwargs)
+        return self.run(*args, **kwargs)
 
     @staticmethod
     def _setup_argparser():
@@ -27,7 +27,7 @@ class Program:
             'prog': PROG_NAME,
             'formatter_class': argparse.RawDescriptionHelpFormatter,
             'description': 'Execute a command and send its output via email',
-            'usage': 'usage: %(prog)s [OPTIONS] [--] COMMAND [ARGS ...]',
+            'usage': '%(prog)s [OPTIONS] [--] COMMAND [ARGS ...]',
             'epilog': """To prevent ARGS to be interpreted as OPTIONS to %(prog)s,
  add two dashes (--) before the COMMAND.
 
@@ -123,8 +123,13 @@ To get an email if the command fails OR produce output use the option
             sys.stderr.write('Sending email failed (\'{cmd}\' returned {ret})\n'.format(cmd=sendmail_cmd,
                                                                                         ret=ret.returncode))
 
-    def run(self, **kwargs):
-        argv = kwargs.get('argv', None)
+    def run(self, *args, **kwargs):
+        if 'argv' in kwargs:
+            argv = kwargs.get('argv', None)
+        elif args:
+            argv = args
+        else:
+            argv = None
         prog_args = self._parse_args(argv)
 
         command = prog_args.command + prog_args.argv

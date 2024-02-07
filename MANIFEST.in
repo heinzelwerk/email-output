@@ -1,1 +1,1 @@
-include scripts/email-output.py
+include email-output.py

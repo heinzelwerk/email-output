@@ -23,6 +23,8 @@ good-names=_,
            cm,  # cm stands for ContextManager
            pk,  # pk stands for primary key
 
+module-naming-style=any
+
 [FORMAT]
 
 max-line-length=120
