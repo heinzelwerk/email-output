@@ -1,0 +1,21 @@
+Summary: Execute a command and send its output via email
+License: Public Domain
+BuildArch: noarch
+Source0: %{name}-%{version}.tar.gz
+
+%description
+email-output is a single python script,
+that will run a given command,
+captures its output and send it via email.
+
+%prep
+%setup -q 
+
+%install
+mkdir -p %{buildroot}%{_bindir}/
+install -m 755 email-output.py %{buildroot}%{_bindir}/email-output.py
+
+%files
+%{_bindir}/email-output.py
+
+%changelog

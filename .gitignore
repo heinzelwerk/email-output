@@ -1,6 +1,7 @@
 *.pyc
 
 /build/
+/dist/
 /email_output.egg-info/
 
 /.coverage
